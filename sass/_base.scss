@@ -1,0 +1,33 @@
+$background-color: #25476a;
+$azul: #25476a;
+$verde: #8BC34A;
+$amarillo: #F7B201;
+$morado: #AE66BC;
+$celeste: #35AAF4;
+$rojo: #EB5334;
+$blanco: #fff2d5;
+$negro: #464646;
+$naranja: #f19d2e;
+$map_colores: (1:#EB5334,2:#8BC34A, 3:#25476a, 4:#57a54e, 5:#464646, 6:#EB5334, 7:#f19d2e, 8:#EB5334);
+
+
+
+@mixin grid($grid-type, $args, $row-gap, $column-gap: $row-gap) {
+    @supports (display: grid) {
+        display: grid;
+        #{$grid-type}: #{$args};
+        column-gap: $column-gap + px;
+        row-gap: $row-gap + px;
+    }
+}
+
+
+@mixin  sombra($tiempo) {
+    transition: $tiempo ;
+
+    &:hover {
+        transform: scale(1.005);
+        box-shadow: 8px 8px 5px grey;
+        cursor: pointer;
+    }
+}

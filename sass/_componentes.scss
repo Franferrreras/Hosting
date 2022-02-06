@@ -1,0 +1,69 @@
+@each $clave, $valor in $map_colores {
+    .cards {
+        >:nth-child(#{$clave}) {
+            background-color: #{$valor};
+            &:hover {
+                background-color: #ffffff;
+                color: #4b4b4b;
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
+.perfil {
+    font-size: 4rem;
+    background-color: rgb(168, 168, 168);
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(82, 82, 82);
+    cursor: pointer;
+}
+
+.grafica {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 4px;
+    @include sombra(0.5);
+}
+
+
+.card {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px ;
+    color: white;
+    @include sombra(0.5);
+    img {
+        width: 10%;
+        height: fit-content;
+    }
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        padding: 0px;
+
+        p {
+            width: 100%;
+            height: fit-content;
+            margin: 0px;
+            padding: 2px;
+            margin-left: 10px;
+        }
+
+        p:last-child {
+            font-size: .8em;
+        }
+    }
+
+}
+
+
